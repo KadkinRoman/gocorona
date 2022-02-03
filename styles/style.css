@@ -359,20 +359,21 @@ body {
     flex: 1 1 auto;
 }
 
-.main__get-started {
+.get-started {
     background-color: #fafbfd;
+    margin-bottom: 13rem;
 }
 
-.get-started {
+.get-started__container {
     position: relative;
     display: flex;
-    align-content: center;
+    align-items: center;
     padding-top: 15rem;
     padding-bottom: 6rem;
     flex-wrap: wrap;
 }
 
-.get-started::before {
+.get-started__container::before {
     content: "";
     position: absolute;
     width: 100vw;
@@ -381,7 +382,7 @@ body {
     top: 0;
     transform: translate(100%, 0);
     background: #ec5863;
-    border-radius: 3rem 0 0 3rem;
+    border-radius: 3rem 0;
 }
 
 .get-started__content {
@@ -392,9 +393,6 @@ body {
 
 .get-started__block-text {
     max-width: 41rem;
-    padding: 9rem 0;
-    margin-bottom: 1.2rem;
-    margin-right: 1rem;
 }
 
 .block-text {
@@ -407,6 +405,8 @@ body {
     font-size: 44px;
     line-height: 1.25;
     color: #000;
+    margin: 0;
+    margin-bottom: 1.5rem;
 }
 
 .block-text__title_color_blue {
@@ -445,18 +445,33 @@ body {
 
 .watch {
     padding-bottom: 5rem;
+    position: relative;
 }
 
 .watch__video {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 23rem;
+    max-width: 24rem;
 }
 
 .video-watch {}
 
-.video-watch__icon {}
+.watch::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    right: 26.7rem;
+    top: 0;
+    transform: translate(100%, 0);
+    background: #ec5863;
+    border-radius: 0 3rem;
+}
+
+.video-watch__icon {
+    margin-right: 1rem;
+}
 
 .video-watch__body {}
 
@@ -486,18 +501,20 @@ body {
 }
 
 @media (max-width: 768.98px) {
-    .get-started::before {
+    .get-started__container::before {
         display: none;
     }
-    .get-started {
-        padding-top: 8rem;
+    .get-started__container {
+        padding: 8rem 1.5rem 2rem;
     }
     .get-started__content {
         flex: 1 1 100%;
+        padding-right: 0;
     }
     .get-started__block-text {
         max-width: none;
         padding: 0;
+        margin-right: 0;
     }
     .block-text__title {
         font-size: 3rem;
@@ -506,6 +523,32 @@ body {
         flex: 1 1 100%;
     }
 }
+
+
+/**********************************************/
+
+
+/* stay-sefe */
+
+.stay-safe {}
+
+.stay-safe__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.stay-safe__image img {
+    max-width: 100%;
+}
+
+.stay-safe__content {
+    max-width: 48rem;
+}
+
+.stay-safe__block-text {}
 
 
 /**********************************************/
